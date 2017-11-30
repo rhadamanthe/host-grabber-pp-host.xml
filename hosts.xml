@@ -56,6 +56,7 @@
 	<searchpattern>self</searchpattern>
 </host>
 
+<!--
 <host id="coppermine_gallery">
 <urlpattern>^http://.+/displayimage((\.php\?album=\w+&amp;(cat=\d+&amp;)?(pos|pid)=\d+(&amp;uid=\d+)?)|(-\d+-\d+\.html))($|#)</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
@@ -104,6 +105,7 @@
 	return retVal;
 	}]]></searchpattern>
 </host>
+-->
 
 <host id="deviantart">
 	<urlpattern>^http://.+\.deviantart\.com/art/.+</urlpattern>
@@ -130,10 +132,12 @@
 	<searchpattern>ID: subject</searchpattern>
 </host>
 
+<!--
 <host id="fetlife">
 <urlpattern>^http://fetlife\.com/.+/pictures/\d+</urlpattern>
 <searchpattern>src=".+?_720\..{3,4}"</searchpattern>
 </host>
+-->
 
 <!--
 <host id="flickr">
@@ -445,7 +449,7 @@
 
 <host id="The Fetish Queen">
 	<urlpattern>^http://www\.the-fetish-queen\.de/members/pictures/.+\.html?$</urlpattern>
-	<searchpattern>expreg: src=\"(images/.+\)"</searchpattern>
+	<searchpattern>expreg: src="(images/.+)"</searchpattern>
 </host>
 
 <host id="thesuperficial">
@@ -464,8 +468,8 @@
 </host>
 
 <host id="tinypic2">
-<urlpattern>^http://i\d+\.tinypic\.com/.+\..{3,4}$</urlpattern>
-<searchpattern>self</searchpattern>
+	<urlpattern>^http://i\d+\.tinypic\.com/.+\..{3,4}$</urlpattern>
+	<searchpattern>self</searchpattern>
 </host>
 
 <!--
