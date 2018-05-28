@@ -298,7 +298,7 @@
 </host>
 
 <host id="LeBoxonDeLex-gallery">
-	<urlpattern>^https?://le-boxon-de-lex\.fr/galerie/miniatures/[^<>"]*\.(jpg|png|gif)$</urlpattern>
+	<urlpattern>^https?://le-boxon-de-lex\.fr/galerie/miniatures/[^&gt;&lt;"]*\.(jpg|png|gif)$</urlpattern>
 	<searchpattern>replace: '/miniatures/([^/]+)/tn_(.+)', '/originales/$1/$2'</searchpattern>
 </host>
 
