@@ -298,12 +298,12 @@
 </host>
 
 <host id="LeBoxonDeLex-gallery">
-	<urlpattern>^https?://le-boxon-de-lex\.fr/galerie/miniatures/[^&gt;&lt;"]*\.(jpg|png|gif)$</urlpattern>
+	<urlpattern>https?://le-boxon-de-lex\.fr/galerie/miniatures/[^&gt;&lt;"]*\.(jpg|png|gif)</urlpattern>
 	<searchpattern>replace: '/miniatures/([^/]+)/tn_(.+)', '/originales/$1/$2'</searchpattern>
 </host>
 
 <host id="LeBoxonDeLex-webms">
-	<urlpattern>^https?://videos\.le-boxon-de-lex\.fr/webms/.*\.mp4$</urlpattern>
+	<urlpattern>https?://videos\.le-boxon-de-lex\.fr/webm/[^&gt;&lt;"]*\.mp4</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
