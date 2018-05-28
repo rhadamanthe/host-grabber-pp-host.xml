@@ -297,8 +297,8 @@
 	<searchpattern>xpath: //div[@class='image']/img/@src</searchpattern>
 </host>
 
-<host id="LeBoxonDeLex-pics">
-	<urlpattern>^https?://le-boxon-de-lex\.fr/.*\.(jpg|png|gif)$</urlpattern>
+<host id="LeBoxonDeLex-gallery">
+	<urlpattern>^https?://le-boxon-de-lex\.fr/galerie/miniatures/[^<>"]*\.(jpg|png|gif)$</urlpattern>
 	<searchpattern>replace: '/miniatures/([^/]+)/tn_(.+)', '/originales/$1/$2'</searchpattern>
 </host>
 
