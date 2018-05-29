@@ -2,32 +2,32 @@
 <root>
 
 <host id="4chan">
-	<urlpattern>^http://.+\.4chan\.org/.+/src/.+</urlpattern>
+	<urlpattern>http://.+\.4chan\.org/.+/src/.+</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
 <host id="4chanarchive">
-	<urlpattern>^http://4chanarchive\.org/images/.+/.+\..{3,4}$</urlpattern>
+	<urlpattern>http://4chanarchive\.org/images/.+/.+\..{3,4}</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
 <host id="abload">
-	<urlpattern>^http://www\.abload\.de/image\.php\?img=</urlpattern>
+	<urlpattern>http://www\.abload\.de/image\.php\?img=</urlpattern>
 	<searchpattern>ID: image</searchpattern>
 </host>
 
 <host id="akiba-online">
-	<urlpattern>^http://(?:www\.)?akiba-online\.com/forum/attachment\.php\?attachmentid=\d+</urlpattern>
+	<urlpattern>http://(?:www\.)?akiba-online\.com/forum/attachment\.php\?attachmentid=\d+</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
 <host id="bellazon">
-	<urlpattern>^http://www\.bellazon\.com/main/index\.php\?.+attach</urlpattern>
+	<urlpattern>http://www\.bellazon\.com/main/index\.php\?.+attach</urlpattern>
 	<searchpattern>ID: thepic</searchpattern>
 </host>
 
 <host id="celebrities-pictures">
-<urlpattern>^http://www\.celebrities-pictures\.com/photo/.+\.jpg\.html</urlpattern>
+<urlpattern>http://www\.celebrities-pictures\.com/photo/.+\.jpg\.html</urlpattern>
 <searchpattern>expreg: http://all-pictures\.pixcatcher\.com/download/\?url=(.+\.jpg)</searchpattern>
 </host>
 
@@ -37,7 +37,7 @@
 </host>
 
 <host id="celebritypictures">
-	<urlpattern>^http://www\.celebritypictures\.com/celebs/.+\.jpg</urlpattern>
+	<urlpattern>http://www\.celebritypictures\.com/celebs/.+\.jpg</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
@@ -47,18 +47,18 @@
 </host>
 
 <host id="celebscentral">
-	<urlpattern>^http://\w+\.celebscentral\.net/photo/</urlpattern>
+	<urlpattern>http://\w+\.celebscentral\.net/photo/</urlpattern>
 	<searchpattern>ID: thepic</searchpattern>
 </host>
 
 <host id="cfake">
-	<urlpattern>^http://cfake\.com/photos/.+\.(jpg|png|gif)</urlpattern>
+	<urlpattern>http://cfake\.com/photos/.+\.(jpg|png|gif)</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
 <!--
 <host id="coppermine_gallery">
-<urlpattern>^http://.+/displayimage((\.php\?album=\w+&amp;(cat=\d+&amp;)?(pos|pid)=\d+(&amp;uid=\d+)?)|(-\d+-\d+\.html))($|#)</urlpattern>
+<urlpattern>http://.+/displayimage((\.php\?album=\w+&amp;(cat=\d+&amp;)?(pos|pid)=\d+(&amp;uid=\d+)?)|(-\d+-\d+\.html))($|#)</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
 	var retVal = new Object();
 
@@ -87,7 +87,7 @@
 </host>
 
 <host id="coppermine_gallery2">
-<urlpattern>^http://.+/displayimage(?:\.php\?pid=\d+|-\d+\.html)&amp;fullsize=1</urlpattern>
+<urlpattern>http://.+/displayimage(?:\.php\?pid=\d+|-\d+\.html)&amp;fullsize=1</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
 	var retVal = new Object();
 
@@ -108,17 +108,17 @@
 -->
 
 <host id="deviantart">
-	<urlpattern>^http://.+\.deviantart\.com/art/.+</urlpattern>
+	<urlpattern>http://.+\.deviantart\.com/art/.+</urlpattern>
 	<searchpattern>ID: gmi-ResViewSizer_fullimg</searchpattern>
 </host>
 
 <host id="egotastic">
-	<urlpattern>^http://(?:www\.)?egotastic\.com/\d+/\d+/[^/]+/[^/]+/$</urlpattern>
+	<urlpattern>http://(?:www\.)?egotastic\.com/\d+/\d+/[^/]+/[^/]+/</urlpattern>
 	<searchpattern><![CDATA[expreg: <a href="([^"]+)" class="view-orig"]]></searchpattern>
 </host>
 
 <host id="eroprofile">
-	<urlpattern>^http://www\.eroprofile\.com/.+/photos/view/</urlpattern>
+	<urlpattern>http://www\.eroprofile\.com/.+/photos/view/</urlpattern>
 	<searchpattern><![CDATA[expreg: <div class="photo"><a href="(.+?)"]]></searchpattern>
 </host>
 
@@ -128,20 +128,20 @@
 </host>
 
 <host id="fapomatic">
-	<urlpattern>^https?://(?:.*\.)?fapomatic\.com/show\.php\?(.*&amp;)?f=.+$</urlpattern>
+	<urlpattern>https?://(?:.*\.)?fapomatic\.com/show\.php\?(.*&amp;)?f=.+</urlpattern>
 	<searchpattern>ID: subject</searchpattern>
 </host>
 
 <!--
 <host id="fetlife">
-<urlpattern>^http://fetlife\.com/.+/pictures/\d+</urlpattern>
+<urlpattern>http://fetlife\.com/.+/pictures/\d+</urlpattern>
 <searchpattern>src=".+?_720\..{3,4}"</searchpattern>
 </host>
 -->
 
 <!--
 <host id="flickr">
-<urlpattern>^https?://www\.flickr\.com/photos/[^/]+/\d+/(?:in/[^#]+)$</urlpattern>
+<urlpattern>https?://www\.flickr\.com/photos/[^/]+/\d+/(?:in/[^#]+)</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
 	var retVal = new Object();
 	var url = pageData.match(/"url":"([^"]+)","key":"o"/);
@@ -161,48 +161,48 @@
 -->
 
 <host id="hotcelebshome">
-	<urlpattern>^http://www\.hotcelebshome\.com/\d+/\d+/\d+/.+?/(?!trackback).+?/$</urlpattern>
+	<urlpattern>http://www\.hotcelebshome\.com/\d+/\d+/\d+/.+?/(?!trackback).+?/</urlpattern>
 	<searchpattern>ID: thepic</searchpattern>
 </host>
 
 <host id="hqscan">
-	<urlpattern>http://www\.hqscan\.com/pics/.+</urlpattern> 
+	<urlpattern>http://www\.hqscan\.com/pics/[^&lt;&gt;"]+</urlpattern> 
 	<searchpattern>expreg: src="(http://people\.freenet\.de/.+)"</searchpattern> 
 </host>
 
 <host id="image-bugs">
-<urlpattern>^https?://www\.image-bugs\.com/image/.+</urlpattern>
+<urlpattern>https?://www\.image-bugs\.com/image/[^&lt;&gt;"]+</urlpattern>
 <searchpattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></searchpattern>
 </host>
 
 <host id="imagebam">
-	<urlpattern>^http://www\.imagebam\.com/image/[^&amp;]+$</urlpattern>
+	<urlpattern>http://www\.imagebam\.com/image/[^&amp;&lt;&gt;"]+</urlpattern>
 	<searchpattern>class: image</searchpattern>
 </host>
 
 <host id="imagefap">
-<urlpattern>^https?://(www\.)?imagefap\.com/photo/.*</urlpattern>
+<urlpattern>https?://(www\.)?imagefap\.com/photo/[^&lt;&gt;"]*</urlpattern>
 <searchpattern>expreg: "contentUrl"\s*:\s*"(.*)"</searchpattern>
 </host>
 
 <host id="imagepix">
-	<urlpattern>http://imagepix\.org/image/.+</urlpattern> 
+	<urlpattern>http://imagepix\.org/image/[^&lt;&gt;"]+</urlpattern> 
 	<searchpattern>REPLACE: 'image/(.+)\.html','full/$1.jpg'</searchpattern> 
 </host>
 
 <host id="imagerise">
-	<urlpattern>http://www\.imagerise\.com/(show|view)\.php/.+</urlpattern>
+	<urlpattern>http://www\.imagerise\.com/(show|view)\.php/[^&lt;&gt;"]+</urlpattern>
 	<searchpattern>ID: img_obj</searchpattern>
 </host>
 
 <host id="imagetwist">
-<urlpattern>https?://imagetwist\.com/.+</urlpattern> 
+<urlpattern>https?://imagetwist\.com/[^&lt;&gt;"]+</urlpattern> 
 <searchpattern>class: pic img img-responsive</searchpattern> 
 </host>
 
 <!--
 <host id="imagevenue">
-<urlpattern>^https?://img[0-9]+\.imagevenue\.com/(img|view)\.php\?(.*&amp;)?image=</urlpattern>
+<urlpattern>https?://img[0-9]+\.imagevenue\.com/(img|view)\.php\?(.*&amp;)?image=</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
 	var retVal = new Object();
 
@@ -248,17 +248,17 @@
 </host>
 
 <host id="img.ns4w.org">
-	<urlpattern>^http://img\.ns4w\.org/show\.php/.+\.html$</urlpattern>
+	<urlpattern>http://img\.ns4w\.org/show\.php/.+\.html</urlpattern>
 	<searchpattern>ID: img_obj</searchpattern>
 </host>
 
 <host id="imgbox">
-	<urlpattern>^https?://imgbox\.com/.+</urlpattern>
+	<urlpattern>https?://imgbox\.com/[^&lt;&gt;"]+</urlpattern>
 	<searchpattern>ID: img</searchpattern>
 </host>
 
 <host id="imgchili">
-	<urlpattern>^http://imgchili\.net/show/</urlpattern>
+	<urlpattern>http://imgchili\.net/show/</urlpattern>
 	<searchpattern>ID: show_image</searchpattern>
 </host>
 
@@ -268,32 +268,32 @@
 </host>
 
 <host id="imgur">
-	<urlpattern>^http://imgur\.com/.+</urlpattern>
+	<urlpattern>http://imgur\.com/[^&lt;&gt;"]+</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
 <host id="instagram-pics">
-	<urlpattern>^https?://www\.instagram\.com/p/.+</urlpattern>
+	<urlpattern>https?://www\.instagram\.com/p/[^&lt;&gt;"]+</urlpattern>
 	<searchpattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></searchpattern>
 </host>
 
 <host id="instagram-vids">
-	<urlpattern>^https?://www\.instagram\.com/p/.+</urlpattern>
+	<urlpattern>https?://www\.instagram\.com/p/[^&lt;&gt;"]+</urlpattern>
 	<searchpattern><![CDATA[expreg: <meta property="og:video"\s+content="([^"]+)"]]></searchpattern>
 </host>
 
 <host id="justjared">
-	<urlpattern>^http://justjared(?:jr)?\.buzznet\.com/photo-gallery/\d+/.+?/$</urlpattern>
+	<urlpattern>http://justjared(?:jr)?\.buzznet\.com/photo-gallery/\d+/.+?/</urlpattern>
 	<searchpattern>ID: feature_image</searchpattern>
 </host>
 
 <host id="kinghost">
-	<urlpattern>^http://www\d*\.kinghost\.com/.+\.jpg</urlpattern>
+	<urlpattern>http://www\d*\.kinghost\.com/.+\.jpg</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
 <host id="leathercelebrities">
-	<urlpattern>^https?://www\.leathercelebrities\.com/photos/viewgallery/.+</urlpattern>
+	<urlpattern>https?://www\.leathercelebrities\.com/photos/viewgallery/[^&lt;&gt;"]+</urlpattern>
 	<searchpattern>xpath: //div[@class='image']/img/@src</searchpattern>
 </host>
 
@@ -308,43 +308,43 @@
 </host>
 
 <host id="myspace">
-	<urlpattern>^http://viewmorepics\.myspace\.com/index\.cfm\?fuseaction=viewImage.+imageID=\d+</urlpattern>
+	<urlpattern>http://viewmorepics\.myspace\.com/index\.cfm\?fuseaction=viewImage.+imageID=\d+</urlpattern>
 	<searchpattern>ID: userImage</searchpattern>
 </host>
 
 <host id="myspace2">
-	<urlpattern>^http://www\.myspace\.com/.+/photos/\d+</urlpattern>
+	<urlpattern>http://www\.myspace\.com/.+/photos/\d+</urlpattern>
 	<searchpattern>ID: singlePhotoImage</searchpattern>
 </host>
 
 <host id="photo.net">
-	<urlpattern>^http://(?:www\.)?photo.net/photodb/photo\?photo_id=\d+</urlpattern>
+	<urlpattern>http://(?:www\.)?photo.net/photodb/photo\?photo_id=\d+</urlpattern>
 	<searchpattern>REPLACE: 'http://photo\.net/photodb/photo\?photo_id=(\d+)' , 'http://gallery.photo.net/photo/$1-lg.jpg'</searchpattern>
 </host>
 
 <host id="photobucket">
-	<urlpattern>^http://.+\.photobucket\.com/albums/.+/\?action=view\&amp;current=.+\..{3,4}</urlpattern>
+	<urlpattern>http://.+\.photobucket\.com/albums/.+/\?action=view\&amp;current=.+\..{3,4}</urlpattern>
 	<searchpattern>REPLACE: 'http:\/\/(.+)\\.photobucket\\.com\/albums\/(.+)\/.+current=(.+\\....)' , 'http://$1.photobucket.com/albums/$2/$3'</searchpattern>
 </host>
 
 <host id="photobucket2">
-	<urlpattern>^http://.+\.photobucket\.com/albums/.+/.+\..{3,4}</urlpattern>
+	<urlpattern>http://.+\.photobucket\.com/albums/.+/.+\..{3,4}</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
 <host id="photocelebs">
-	<urlpattern>^http://www\.photocelebs\.info/.+/.+</urlpattern>
+	<urlpattern>http://www\.photocelebs\.info/.+/[^&lt;&gt;"]+</urlpattern>
 	<searchpattern>ID: thepic</searchpattern>
 </host>
 
 <host id="picland">
-	<urlpattern>^http://www\.picland\.to/show\.php\?id=</urlpattern>
+	<urlpattern>http://www\.picland\.to/show\.php\?id=</urlpattern>
 	<searchpattern>ID: image</searchpattern>
 </host>
 
 <!--
 <host id="pimpandhost">
-<urlpattern>^http://(?:image\.|www\.)?pimpandhost\.com/(?:(?:image|guest)/.+\.html|image/show/id/\d+)$</urlpattern>
+<urlpattern>http://(?:image\.|www\.)?pimpandhost\.com/(?:(?:image|guest)/.+\.html|image/show/id/\d+)</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
 	var retVal = new Object();
 	
@@ -376,14 +376,19 @@
 </host>
 -->
 
-<host id="pixhost">
-	<urlpattern>^https?://pixhost\.org/show/.+</urlpattern>
+<host id="pixhost-org">
+	<urlpattern>https?://pixhost\.org/show/[^&lt;&gt;"]+</urlpattern>
+	<searchpattern>ID: image</searchpattern>
+</host>
+
+<host id="pixhost-to">
+	<urlpattern>https?://pixhost\.to/show/[^&lt;&gt;"]+</urlpattern>
 	<searchpattern>ID: image</searchpattern>
 </host>
 
 <!--
 <host id="pixroute">
-<urlpattern>^http://(?:www\.)?pixroute\.com/.+/.+\.html$</urlpattern>
+<urlpattern>http://(?:www\.)?pixroute\.com/.+/.+\.html</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
 	var retVal = new Object();
 	
@@ -408,7 +413,7 @@
 
 <!--
 <host id="postimage">
-<urlpattern>^http://(?:www\.)?postimage\.org/image(?:\.php\?|/)</urlpattern>
+<urlpattern>http://(?:www\.)?postimage\.org/image(?:\.php\?|/)</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
 	var retVal = new Object();
 
@@ -438,43 +443,43 @@
 -->
 
 <host id="skins.be" maxThreads="2">
-	<urlpattern>^http://image\.skins\.be/[0-9]+/.+/</urlpattern>
+	<urlpattern>http://image\.skins\.be/[0-9]+/.+/</urlpattern>
 	<searchpattern>ID: wallpaper_image</searchpattern>
 </host>
 
 <host id="southern-charms">
-	<urlpattern>^http://(?:www\.)?southern-charms\.com/.+/.+x\d+\..{3,4}</urlpattern>
+	<urlpattern>http://(?:www\.)?southern-charms\.com/.+/.+x\d+\..{3,4}</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
 <host id="The Fetish Queen">
-	<urlpattern>^http://www\.the-fetish-queen\.de/members/pictures/.+\.html?$</urlpattern>
+	<urlpattern>http://www\.the-fetish-queen\.de/members/pictures/[^&lt;&gt;"]+\.html</urlpattern>
 	<searchpattern>expreg: src="(images/.+)"</searchpattern>
 </host>
 
 <host id="thesuperficial">
-	<urlpattern>^http://(?:www\.)?thesuperficial\.com/[^/]+/[^?#/]+$</urlpattern>
+	<urlpattern>http://(?:www\.)?thesuperficial\.com/[^/]+/[^?#/]+</urlpattern>
 	<searchpattern><![CDATA[expreg: <a href="(.+?)" >View Original</a>]]></searchpattern>
 </host>
 
 <host id="thesupermodelsgallery">
-	<urlpattern>^http://www\.thesupermodelsgallery\.com/wp-content/uploads/\d+/\d+/.+/.+\..{3,4}$</urlpattern>
+	<urlpattern>http://www\.thesupermodelsgallery\.com/wp-content/uploads/\d+/\d+/.+/.+\..{3,4}</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
 <host id="tinypic">
-	<urlpattern>^http://tinypic\.com/.+pic=.+$</urlpattern>
+	<urlpattern>http://tinypic\.com/.+pic=.+</urlpattern>
 	<searchpattern>ID: imgElement</searchpattern>
 </host>
 
 <host id="tinypic2">
-	<urlpattern>^http://i\d+\.tinypic\.com/.+\..{3,4}$</urlpattern>
+	<urlpattern>http://i\d+\.tinypic\.com/.+\..{3,4}</urlpattern>
 	<searchpattern>self</searchpattern>
 </host>
 
 <!--
 <host id="tumblr">
-<urlpattern>^http://.+\.tumblr\.com/post/.+</urlpattern>
+<urlpattern>http://.+\.tumblr\.com/post/.+</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
 	var retVal = new Object();
 	
@@ -496,32 +501,32 @@
 -->
 
 <host id="turboimagehost">
-	<urlpattern>^https://www\.turboimagehost\.com/p/.+</urlpattern>
+	<urlpattern>https://www\.turboimagehost\.com/p/.+</urlpattern>
 	<searchpattern>ID: imageid</searchpattern>
 </host>
 
 <host id="x-art">
-	<urlpattern>^http://hosted\.x-art\.com/galleries/\w+/view_image\.php.+</urlpattern>
+	<urlpattern>http://hosted\.x-art\.com/galleries/\w+/view_image\.php.+</urlpattern>
 	<searchpattern>ID: gallery_image</searchpattern>
 </host>
 
 <host id="xhamster">
-	<urlpattern>^https?://(.*\.)?xhamster\.com/photos/gallery/\d+[^?]+$</urlpattern>
+	<urlpattern>https?://(.*\.)?xhamster\.com/photos/gallery/\d+[^?]+</urlpattern>
 	<searchpattern>ID: imgSized</searchpattern>
 </host>
 
 <host id="legsonshow">
-	<urlpattern>^https?://(.*\.)?legsonshow\.com/members/gallery/\d+/.*album.*/\d+-\d+.*</urlpattern>
+	<urlpattern>https?://(.*\.)?legsonshow\.com/members/gallery/\d+/.*album.*/\d+-\d+.*</urlpattern>
 	<searchpattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></searchpattern>
 </host>
 
 <host id="yfrog">
-	<urlpattern>^http://yfrog\.com/\w+$</urlpattern>
+	<urlpattern>http://yfrog\.com/\w+</urlpattern>
 	<searchpattern><![CDATA[expreg: Direct:.+?href="(.+?)"]]></searchpattern>
 </host>
 
 <host id="zimagez">
-	<urlpattern>^http://www\.zimagez\.com/zimage/.+\.php</urlpattern>
+	<urlpattern>http://www\.zimagez\.com/zimage/.+\.php</urlpattern>
 	<searchpattern>ID: userPic</searchpattern>
 </host>
 
