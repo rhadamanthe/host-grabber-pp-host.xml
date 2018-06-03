@@ -32,8 +32,8 @@
 </host>
 
 <host id="celebritypicsblog">
-	<urlpattern>http://celebritypicsblog\.com/viewer\.php\?id=+.</urlpattern> 
-	<searchpattern>REPLACE: 'viewer\.php\?id=(.+)','images/$1'</searchpattern> 
+	<urlpattern>http://celebritypicsblog\.com/viewer\.php\?id=+.</urlpattern>
+	<searchpattern>REPLACE: 'viewer\.php\?id=(.+)','images/$1'</searchpattern>
 </host>
 
 <host id="celebritypictures">
@@ -64,10 +64,10 @@
 
 	var site = pageUrl.match(/(http://.+?/)displayimage/);
 	var iUrl = pageData.match(/MM_openBrWindow\('(display.+?)'/);
-	
+
 	if (!iUrl) {
 		iUrl = pageData.match(/<img src="([^>]+?)"[^>]+?class="image"/);
-		
+
 		if (!iUrl) {
 			retVal.imgUrl = null;
 			retVal.status = "ABORT";
@@ -81,7 +81,7 @@
 		retVal.imgUrl = site[1] + iUrl[1].replace(/&amp;/g, "&");
 		retVal.status = "REQUEUE";
 		}
-	
+
 	return retVal;
 	}]]></searchpattern>
 </host>
@@ -101,7 +101,7 @@
 		retVal.imgUrl = iUrl[1];
 		retVal.status = "OK";
 		}
-	
+
 	return retVal;
 	}]]></searchpattern>
 </host>
@@ -149,12 +149,12 @@
 	if (url) {
 		retVal.imgUrl = 'https:' + url[1].replace(new RegExp('\\\/', 'g'), "/");
 		retVal.status = "OK";
-	
+
 	} else {
 		retVal.imgUrl = null;
 		retVal.status = "ABORT";
 	}
-	
+
 	return retVal;
 }]]></searchpattern>
 </host>
@@ -166,8 +166,8 @@
 </host>
 
 <host id="hqscan">
-	<urlpattern>http://www\.hqscan\.com/pics/[^&lt;&gt;"]+</urlpattern> 
-	<searchpattern>expreg: src="(http://people\.freenet\.de/.+)"</searchpattern> 
+	<urlpattern>http://www\.hqscan\.com/pics/[^&lt;&gt;"]+</urlpattern>
+	<searchpattern>expreg: src="(http://people\.freenet\.de/.+)"</searchpattern>
 </host>
 
 <host id="image-bugs">
@@ -186,8 +186,8 @@
 </host>
 
 <host id="imagepix">
-	<urlpattern>http://imagepix\.org/image/[^&lt;&gt;"]+</urlpattern> 
-	<searchpattern>REPLACE: 'image/(.+)\.html','full/$1.jpg'</searchpattern> 
+	<urlpattern>http://imagepix\.org/image/[^&lt;&gt;"]+</urlpattern>
+	<searchpattern>REPLACE: 'image/(.+)\.html','full/$1.jpg'</searchpattern>
 </host>
 
 <host id="imagerise">
@@ -196,13 +196,13 @@
 </host>
 
 <host id="imagetwist">
-<urlpattern>https?://imagetwist\.com/[^&lt;&gt;"]+</urlpattern> 
-<searchpattern>class: pic img img-responsive</searchpattern> 
+<urlpattern>https?://imagetwist\.com/[^&lt;&gt;"]+</urlpattern>
+<searchpattern>class: pic img img-responsive</searchpattern>
 </host>
 
 <host id="imagevenue">
-<urlpattern>https?://img[0-9]+\.imagevenue\.com/(img|view)\.php\?([^&lt;&gt;"]+&amp;)?image=</urlpattern> 
-<searchpattern>ID: thepic</searchpattern> 
+<urlpattern>https?://img[0-9]+\.imagevenue\.com/(img|view)\.php\?([^&lt;&gt;"]+&amp;)?image=[^&lt;&gt;"]+</urlpattern>
+<searchpattern>ID: thepic</searchpattern>
 </host>
 
 <host id="imdb">
@@ -226,8 +226,8 @@
 </host>
 
 <host id="imgfilez">
-	<urlpattern>http://imgfilez\.com/img\.php\?image=.+</urlpattern> 
-	<searchpattern>REPLACE: 'img\.php\?image=(.+)','storage/originals/$1'</searchpattern> 
+	<urlpattern>http://imgfilez\.com/img\.php\?image=.+</urlpattern>
+	<searchpattern>REPLACE: 'img\.php\?image=(.+)','storage/originals/$1'</searchpattern>
 </host>
 
 <host id="imgur">
@@ -310,7 +310,7 @@
 <urlpattern>http://(?:image\.|www\.)?pimpandhost\.com/(?:(?:image|guest)/.+\.html|image/show/id/\d+)</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
 	var retVal = new Object();
-	
+
 	if (pageUrl.match(/-original\.html$/)) {
 		var iUrl = pageData.match(/id="image" src="(.+?)"/);
 		}
@@ -356,11 +356,11 @@
 <urlpattern>http://(?:www\.)?pixroute\.com/.+/.+\.html</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
 	var retVal = new Object();
-	
+
 	var iUrl = pageData.match(/<img src="(http://img\d+\.pixroute\.com/i/.+?)"/);
 	var fName = pageData.match(/Filename:.*?</td><td.*?>(.+?)</td>/);
 	if (fName) fName = fName[1];
-	
+
 	if (!iUrl) {
 		retVal.imgUrl = null;
 		retVal.status = "ABORT";
@@ -390,7 +390,7 @@
 			return retVal;
 			}
 		}
-	
+
 	var iUrl = pageData.match(/src='(http://\w+\.postimage\.org/.+?\..{3,4})'/);
 
 	if (!iUrl) {
@@ -447,7 +447,7 @@
 <urlpattern>http://.+\.tumblr\.com/post/.+</urlpattern>
 <searchpattern><![CDATA[function(pageData, pageUrl) {
 	var retVal = new Object();
-	
+
 	var iUrl = pageData.match(/href="(http://.+\.tumblr\.com/photo/\d+/.+?)"/);
 	if (!iUrl) iUrl = pageData.match(/src="(http://.+\.tumblr\.com.+tumblr_.+?)"/);
 
@@ -476,7 +476,7 @@
 </host>
 
 <host id="xhamster">
-	<urlpattern>https?://(\w+\.)?xhamster\.com/photos/gallery/\d+[^?]+</urlpattern>
+	<urlpattern>https?://(\w+\.)?xhamster\.com/photos/gallery/\d+[^"&lt;&gt;?]+</urlpattern>
 	<searchpattern>ID: imgSized</searchpattern>
 </host>
 
