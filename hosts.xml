@@ -31,6 +31,13 @@
 	<search-pattern>ID: thepic</search-pattern>
 </host>
 
+<!--  Verified -->
+<host id="buchanan-caps">
+	<domain>buchanan-caps.com</domain>
+	<path-pattern>caps/.+\d\.(jpg|png|gif)</path-pattern>
+	<search-pattern>self</search-pattern>
+</host>
+
 <host id="celebrities-pictures">
 	<domain>celebrities-pictures.com</domain>
 	<path-pattern>photo/.+\.jpg\.html</path-pattern>
@@ -194,12 +201,14 @@
 	<search-pattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="imagebam">
 	<domain>imagebam.com</domain>
 	<path-pattern>image/[^&amp;&lt;&gt;"]+</path-pattern>
 	<search-pattern>class: image</search-pattern>
 </host>
 
+<!--  Verified -->
 <host id="imagefap">
 	<domain>imagefap.com</domain>
 	<path-pattern>photo/.*</path-pattern>
@@ -218,15 +227,17 @@
 	<search-pattern>ID: img_obj</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="imagetwist">
 	<domain>imagetwist.com</domain>
-	<path-pattern>.+</path-pattern>
+	<path-pattern>\w+/[^/"]+</path-pattern>
 	<search-pattern>class: pic img img-responsive</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="imagevenue">
 	<domain>imagevenue.com</domain>
-	<path-pattern>(img|view)\.php\?(.+&amp;)?image=.+</path-pattern>
+	<path-pattern>(img|view)\.php\?image=.+</path-pattern>
 	<search-pattern>ID: thepic</search-pattern>
 </host>
 
@@ -242,9 +253,10 @@
 	<search-pattern>ID: img_obj</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="imgbox">
 	<domain>imgbox.com</domain>
-	<path-pattern>.+</path-pattern>
+	<path-pattern>[^"/.]+</path-pattern>
 	<search-pattern>ID: img</search-pattern>
 </host>
 
@@ -260,6 +272,7 @@
 	<search-pattern>REPLACE: 'img\.php\?image=(.+)','storage/originals/$1'</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="imgur">
 	<domain>imgur.com</domain>
 	<path-pattern>.+</path-pattern>
@@ -290,6 +303,7 @@
 	<search-pattern>self</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="leather-celebrities">
 	<domain>leathercelebrities.com</domain>
 	<path-pattern>photos/viewgallery/.+</path-pattern>
@@ -305,7 +319,7 @@
 
 <!-- Verified -->
 <host id="LeBoxonDeLex-webms">
-	<domain>videos.le-boxon-de-lex\.fr</domain>
+	<domain>videos.le-boxon-de-lex.fr</domain>
 	<path-pattern>webm/.*\.mp4</path-pattern>
 	<search-pattern>self</search-pattern>
 </host>
@@ -317,7 +331,7 @@
 </host>
 
 <host id="myspace2">
-	<domain>.myspace.com</domain>
+	<domain>myspace.com</domain>
 	<path-pattern>.+/photos/\d+</path-pattern>
 	<search-pattern>ID: singlePhotoImage</search-pattern>
 </host>
@@ -352,39 +366,12 @@
 	<search-pattern>ID: image</search-pattern>
 </host>
 
-<!--
+<!-- Verified -->
 <host id="pimpandhost">
-<path-pattern>http://(?:image\.|www\.)?pimpandhost\.com/(?:(?:image|guest)/.+\.html|image/show/id/\d+)</path-pattern>
-<search-pattern><![CDATA[function(pageData, pageUrl) {
-	var retVal = new Object();
-
-	if (pageUrl.match(/-original\.html$/)) {
-		var iUrl = pageData.match(/id="image" src="(.+?)"/);
-		}
-	else {
-		if (pageUrl.match(/\.html$/)) {
-			retVal.imgUrl = pageUrl.replace(/.+/(\d+)_x\.html$/, "http://image.pimpandhost.com/image/$1-medium.html");
-			retVal.imgUrl = retVal.imgUrl.replace(/(^http.+-)\w+\.html$/, "$1original.html");
-			}
-		else
-			retVal.imgUrl = pageUrl.replace(/^http.+/show/id/(\d+)$/, "http://pimpandhost.com/image/$1-original.html");
-		retVal.status = "REQUEUE";
-		return retVal;
-		}
-
-	if (!iUrl) {
-		retVal.imgUrl = null;
-		retVal.status = "ABORT";
-		}
-	else {
-		retVal.imgUrl = iUrl[1];
-		retVal.status = "OK";
-		}
-
-	return retVal;
-	}]]></search-pattern>
+	<domain>filesor.com</domain>
+	<path-pattern>pimpandhost.com/.*_(m|l)\.(jpg|png|gif)</path-pattern>
+	<search-pattern>replace: '_(m|l)\.(jpg|png|gif)$', '.$2'</search-pattern>
 </host>
--->
 
 <host id="pixhost-org">
 	<domain>pixhost.org</domain>
@@ -394,6 +381,7 @@
 	<search-pattern>ID: image</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="pixhost-to">
 	<domain>pixhost.to</domain>
 	<path-pattern>show/.+</path-pattern>
@@ -468,10 +456,11 @@
 	<search-pattern>self</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="The Fetish Queen">
 	<domain>the-fetish-queen.de</domain>
-	<path-pattern>members/pictures/.+\.html</path-pattern>
-	<search-pattern>expreg: src="(images/.+)"</search-pattern>
+	<path-pattern>thumbnails/.+</path-pattern>
+	<search-pattern>replace: 'thumbnails/', 'images/'</search-pattern>
 </host>
 
 <host id="thesuperficial">
@@ -533,16 +522,18 @@
 	<search-pattern>ID: gallery_image</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="xhamster">
-	<domain>xhamster.com</domain>
-	<path-pattern>(\w+\.)?x/photos/gallery/\d+[^?]+</path-pattern>
-	<search-pattern>ID: imgSized</search-pattern>
+	<domain>xhcdn.com</domain>
+	<path-pattern>(\d+/)+\d+_450\.(jpg|gif|png)</path-pattern>
+	<search-pattern>replace: '_450\.', '_1000.'</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="legsonshow">
 	<domain>legsonshow.com</domain>
-	<path-pattern>members/gallery/\d+/.+album.+/\d+-\d+.*</path-pattern>
-	<search-pattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></search-pattern>
+	<path-pattern>members/gallery/render/.+\.JPG</path-pattern>
+	<search-pattern>replace: '/render/[^/]+/', '/content/'</search-pattern>
 </host>
 
 <host id="yfrog">
