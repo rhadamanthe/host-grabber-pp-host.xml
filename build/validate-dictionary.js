@@ -14,5 +14,7 @@ fs.readFile( '../hosts.xml', 'utf8', function(err, data) {
 
   if (result.errors.length !== 0) {
     process.exit(1);
+  } else {
+    console.log('Validation succeeded.');
   }
 });
