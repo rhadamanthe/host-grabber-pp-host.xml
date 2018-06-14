@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
+<root id="by-rhadamanthe" version="2018-06-14" spec="1.0">
 
+<!--  Verified -->
 <host id="4chan">
 	<domain>4chan.org</domain>
-	<path-pattern>.+/src/.+</path-pattern>
+	<path-pattern>\w+/.+\.(jpg|png|gif|webm|mp4)</path-pattern>
 	<search-pattern>self</search-pattern>
 </host>
 
@@ -162,26 +163,12 @@
 </host>
 -->
 
-<!--
 <host id="flickr">
-<path-pattern>https?://www\.flickr\.com/photos/[^/]+/\d+/(?:in/[^#]+)</path-pattern>
-<search-pattern><![CDATA[function(pageData, pageUrl) {
-	var retVal = new Object();
-	var url = pageData.match(/"url":"([^"]+)","key":"o"/);
-
-	if (url) {
-		retVal.imgUrl = 'https:' + url[1].replace(new RegExp('\\\/', 'g'), "/");
-		retVal.status = "OK";
-
-	} else {
-		retVal.imgUrl = null;
-		retVal.status = "ABORT";
-	}
-
-	return retVal;
-}]]></search-pattern>
+	<domain>flickr.com</domain>
+	<path-pattern>photos/[^/]+/\d+/in/dateposted/</path-pattern>
+	<interceptor>replace: 'in/dateposted/', '/sizes/o'</interceptor>
+	<search-pattern>xpath: //*[id=all-sizes-header]/dl[2]/dd/a/@href</search-pattern>
 </host>
--->
 
 <host id="hotcelebshome">
 	<domain>hotcelebshome.com</domain>
@@ -524,9 +511,10 @@
 
 <!-- Verified -->
 <host id="xhamster">
-	<domain>xhcdn.com</domain>
-	<path-pattern>(\d+/)+\d+_450\.(jpg|gif|png)</path-pattern>
-	<search-pattern>replace: '_450\.', '_1000.'</search-pattern>
+	<domain>xhamster.com</domain>
+	<path-pattern>_$CURRENT$_</path-pattern>
+	<search-pattern>expreg: //*[@class=image-thumb]/@data-lazy</search-pattern>
+	<interceptor>replace: '_450\.', '_1000.'</interceptor>
 </host>
 
 <!-- Verified -->
