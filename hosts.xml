@@ -363,8 +363,7 @@
 <host id="pixhost-org">
 	<domain>pixhost.org</domain>
 	<path-pattern>show/.+</path-pattern>
-	<redirect-from>pixhost.org/</redirect-from>
-	<redirect-to>pixhost.to/</redirect-to>
+	<interceptor>replace: '\.org/', '.to/'</interceptor>
 	<search-pattern>ID: image</search-pattern>
 </host>
 

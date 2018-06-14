@@ -1,0 +1,22 @@
+{
+  "name": "host-grabber-pp-host.xml-validator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "validate-dictionary.js",
+  "scripts": {
+    "start": "node validate-dictionary.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rhadamanthe/host-grabber-pp-host.xml.git"
+  },
+  "author": "Rhadamanthe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhadamanthe/host-grabber-pp-host.xml/issues"
+  },
+  "homepage": "https://github.com/rhadamanthe/host-grabber-pp-host.xml#readme",
+  "dependencies": {
+    "xmldom": "^0.1.27"
+  }
+}
