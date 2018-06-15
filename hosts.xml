@@ -5,15 +5,15 @@
 <host id="4chan">
 	<domain>4chan.org</domain>
 	<path-pattern>_$CURRENT$_</path-pattern>
-	<search-pattern>xpath: //a[@class=fileThumb]/@href</search-pattern>
+	<search-pattern>xpath: //a[@class='fileThumb']/@href</search-pattern>
 </host>
 
 <!--  Verified -->
-<!-- Archive for 4chan -->
+<!-- Archives for 4chan -->
 <host id="yuki.la">
 	<domain>yuki.la</domain>
 	<path-pattern>_$CURRENT$_</path-pattern>
-	<search-pattern>xpath: //a[@class=fileThumb]/@href</search-pattern>
+	<search-pattern>xpath: //a[@class='fileThumb']/@href</search-pattern>
 </host>
 
 <host id="abload">
