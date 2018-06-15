@@ -4,14 +4,16 @@
 <!--  Verified -->
 <host id="4chan">
 	<domain>4chan.org</domain>
-	<path-pattern>\w+/.+\.(jpg|png|gif|webm|mp4)</path-pattern>
-	<search-pattern>self</search-pattern>
+	<path-pattern>_$CURRENT$_</path-pattern>
+	<search-pattern>xpath: /a[class=fileThumb]/@href</search-pattern>
 </host>
 
-<host id="4chanarchive">
-	<domain>4chanarchive.org</domain>
-	<path-pattern>images/.+/.+\..{3,4}</path-pattern>
-	<search-pattern>self</search-pattern>
+<!--  Verified -->
+<!-- Archive for 4chan -->
+<host id="yuki.la">
+	<domain>yuki.la</domain>
+	<path-pattern>_$CURRENT$_</path-pattern>
+	<search-pattern>xpath: /a[class=fileThumb]/@href</search-pattern>
 </host>
 
 <host id="abload">
@@ -163,6 +165,7 @@
 </host>
 -->
 
+<!-- Verified -->
 <host id="flickr">
 	<domain>flickr.com</domain>
 	<path-pattern>photos/[^/]+/\d+/in/dateposted/</path-pattern>
@@ -182,6 +185,7 @@
 	<search-pattern>expreg: src="(http://people\.freenet\.de/.+)"</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="image-bugs">
 	<domain>image-bugs.com</domain>
 	<path-pattern>image/.+</path-pattern>
@@ -243,8 +247,15 @@
 <!-- Verified -->
 <host id="imgbox">
 	<domain>imgbox.com</domain>
-	<path-pattern>[^"/.]+</path-pattern>
+	<path-pattern>.+</path-pattern>
 	<search-pattern>ID: img</search-pattern>
+</host>
+
+<!-- Verified -->
+<host id="imgcredit.xyz">
+	<domain>imgcredit.xyz</domain>
+	<path-pattern>image/.+</path-pattern>
+	<search-pattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></search-pattern>
 </host>
 
 <host id="imgchili">
@@ -266,12 +277,14 @@
 	<search-pattern>self</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="instagram-pics">
 	<domain>instagram.com</domain>
 	<path-pattern>p/.+</path-pattern>
 	<search-pattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="instagram-vids">
 	<domain>instagram.com</domain>
 	<path-pattern>p/.+</path-pattern>
