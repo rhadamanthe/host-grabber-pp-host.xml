@@ -4,8 +4,7 @@ node_js:
   - "6"
 
 env:
-  - RHAD_SCRIPT="./library.dictionary.js"
-  - RHAD_DICTIONARY="../hosts.xml"
+  - RHAD_SCRIPT="./library.dictionary.js" RHAD_DICTIONARY="../hosts.xml"
 
 before_script:
   - "export DISPLAY=:99.0"
