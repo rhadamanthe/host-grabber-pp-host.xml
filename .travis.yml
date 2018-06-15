@@ -15,6 +15,5 @@ before_script:
   - wget https://raw.githubusercontent.com/rhadamanthe/host-grabber-pp/master/src/scripts/mixed/library.dictionary.js
 
 script:
-  - cd build
   - npm install
   - npm start
