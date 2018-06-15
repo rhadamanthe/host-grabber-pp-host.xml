@@ -5,7 +5,7 @@
 <host id="4chan">
 	<domain>4chan.org</domain>
 	<path-pattern>_$CURRENT$_</path-pattern>
-	<search-pattern>xpath: /a[class=fileThumb]/@href</search-pattern>
+	<search-pattern>xpath: //a[class=fileThumb]/@href</search-pattern>
 </host>
 
 <!--  Verified -->
@@ -13,7 +13,7 @@
 <host id="yuki.la">
 	<domain>yuki.la</domain>
 	<path-pattern>_$CURRENT$_</path-pattern>
-	<search-pattern>xpath: /a[class=fileThumb]/@href</search-pattern>
+	<search-pattern>xpath: //a[class=fileThumb]/@href</search-pattern>
 </host>
 
 <host id="abload">
@@ -169,7 +169,7 @@
 <host id="flickr">
 	<domain>flickr.com</domain>
 	<path-pattern>photos/[^/]+/\d+/in/dateposted/</path-pattern>
-	<interceptor>replace: 'in/dateposted/', '/sizes/o'</interceptor>
+	<interceptor>replace: 'in/dateposted/', 'sizes/o'</interceptor>
 	<search-pattern>xpath: //*[id=all-sizes-header]/dl[2]/dd/a/@href</search-pattern>
 </host>
 
@@ -525,7 +525,7 @@
 <host id="xhamster">
 	<domain>xhamster.com</domain>
 	<path-pattern>_$CURRENT$_</path-pattern>
-	<search-pattern>expreg: //*[@class=image-thumb]/@data-lazy</search-pattern>
+	<search-pattern>xpath: //div[@class=image-thumb]/@data-lazy</search-pattern>
 	<interceptor>replace: '_450\.', '_1000.'</interceptor>
 </host>
 
