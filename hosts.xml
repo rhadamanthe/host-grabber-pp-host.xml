@@ -169,7 +169,7 @@
 <host id="flickr">
 	<domain>flickr.com</domain>
 	<path-pattern>photos/[^/]+/\d+/in/dateposted/</path-pattern>
-	<interceptor>replace: 'in/dateposted/', 'sizes/o'</interceptor>
+	<interceptor>replace: 'in/(dateposted|album-[^/]+)/', 'sizes/o'</interceptor>
 	<search-pattern>xpath: //div[@id='all-sizes-header']/dl[2]/dd/a/@href</search-pattern>
 </host>
 
