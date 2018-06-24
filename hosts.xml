@@ -247,7 +247,7 @@
 <!-- Verified -->
 <host id="imgbox">
 	<domain>imgbox.com</domain>
-	<path-pattern>.+</path-pattern>
+	<path-pattern>[^/]+</path-pattern>
 	<search-pattern>ID: img</search-pattern>
 </host>
 
