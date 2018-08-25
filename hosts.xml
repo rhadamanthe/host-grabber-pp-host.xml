@@ -526,7 +526,7 @@
 	<domain>xhamster.com</domain>
 	<path-pattern>_$CURRENT$_</path-pattern>
 	<search-pattern>xpath: //div[@class='image-thumb']/@data-lazy</search-pattern>
-	<interceptor>replace: '_450\.', '_1000.'</interceptor>
+	<interceptor>replace: '_\d+\.', '_1000.'</interceptor>
 </host>
 
 <!-- Verified -->
