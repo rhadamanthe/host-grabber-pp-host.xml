@@ -168,7 +168,7 @@
 <!-- Verified -->
 <host id="flickr">
 	<domain>flickr.com</domain>
-	<path-pattern>photos/[^/]+/\d+/in/(dateposted|album-[^/]+)/</path-pattern>
+	<path-pattern>photos/[^/]+/\d+/in/(dateposted|album-[^/]+|faves-[^/]+)/</path-pattern>
 	<interceptor>replace: 'in/(dateposted|album-[^/]+|faves-[^/]+)/', 'sizes/o'</interceptor>
 	<search-pattern>xpath: //div[@id='all-sizes-header']/dl[2]/dd/a/@href</search-pattern>
 </host>
