@@ -77,56 +77,12 @@
 	<search-pattern>self</search-pattern>
 </host>
 
-<!--
-<host id="coppermine_gallery">
-<path-pattern>http://.+/displayimage((\.php\?album=\w+&amp;(cat=\d+&amp;)?(pos|pid)=\d+(&amp;uid=\d+)?)|(-\d+-\d+\.html))($|#)</path-pattern>
-<search-pattern><![CDATA[function(pageData, pageUrl) {
-	var retVal = new Object();
-
-	var site = pageUrl.match(/(http://.+?/)displayimage/);
-	var iUrl = pageData.match(/MM_openBrWindow\('(display.+?)'/);
-
-	if (!iUrl) {
-		iUrl = pageData.match(/<img src="([^>]+?)"[^>]+?class="image"/);
-
-		if (!iUrl) {
-			retVal.imgUrl = null;
-			retVal.status = "ABORT";
-			}
-		else {
-			retVal.imgUrl = iUrl[1];
-			retVal.status = "OK";
-			}
-		}
-	else {
-		retVal.imgUrl = site[1] + iUrl[1].replace(/&amp;/g, "&");
-		retVal.status = "REQUEUE";
-		}
-
-	return retVal;
-	}]]></search-pattern>
+<host id="coppermine">
+	<!-- No specific domain here -->
+	<domain></domain>
+	<path-pattern>albums/.*/thumb_\d+~\d+\.(jpg|png|gif)</path-pattern>
+	<search-pattern>replace: 'thumb_([^/]+)\.', 'normal_$1.'</search-pattern>
 </host>
-
-<host id="coppermine_gallery2">
-<path-pattern>http://.+/displayimage(?:\.php\?pid=\d+|-\d+\.html)&amp;fullsize=1</path-pattern>
-<search-pattern><![CDATA[function(pageData, pageUrl) {
-	var retVal = new Object();
-
-	var iUrl = pageData.match(/img src="(.+?)"/);
-
-	if (!iUrl) {
-		retVal.imgUrl = null;
-		retVal.status = "ABORT";
-		}
-	else {
-		retVal.imgUrl = iUrl[1];
-		retVal.status = "OK";
-		}
-
-	return retVal;
-	}]]></search-pattern>
-</host>
--->
 
 <host id="deviantart">
 	<domain>deviantart.com</domain>
