@@ -80,8 +80,8 @@
 <host id="coppermine">
 	<!-- No specific domain here -->
 	<domain>_$CURRENT$_</domain>
-	<path-pattern>_$CURRENT$_</path-pattern>
-	<search-pattern>replace: '(albums/.*/)thumb(_\d+~\d+\.(jpg|png|gif))', '$1normal$2'</search-pattern>
+	<path-pattern>albums/.*/thumb_\d+~\d+\.(jpg|png|gif)</path-pattern>
+	<search-pattern>replace: 'thumb_([^/]+)\.', 'normal_$1.'</search-pattern>
 </host>
 
 <host id="deviantart">
