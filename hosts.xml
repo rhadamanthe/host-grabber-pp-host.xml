@@ -124,8 +124,8 @@
 <!-- Verified -->
 <host id="flickr">
 	<domain>flickr.com</domain>
-	<path-pattern>photos/[^/]+/\d+/in/dateposted/</path-pattern>
-	<interceptor>replace: 'in/dateposted/', 'sizes/o'</interceptor>
+	<path-pattern>photos/[^/]+/\d+/in/(dateposted|album-[^/]+|faves-[^/]+)/</path-pattern>
+	<interceptor>replace: 'in/(dateposted|album-[^/]+|faves-[^/]+)/', 'sizes/o'</interceptor>
 	<search-pattern>xpath: //div[@id='all-sizes-header']/dl[2]/dd/a/@href</search-pattern>
 </host>
 
@@ -203,7 +203,7 @@
 <!-- Verified -->
 <host id="imgbox">
 	<domain>imgbox.com</domain>
-	<path-pattern>.+</path-pattern>
+	<path-pattern>[^/"]+</path-pattern>
 	<search-pattern>ID: img</search-pattern>
 </host>
 
@@ -482,7 +482,7 @@
 	<domain>xhamster.com</domain>
 	<path-pattern>_$CURRENT$_</path-pattern>
 	<search-pattern>xpath: //div[@class='image-thumb']/@data-lazy</search-pattern>
-	<interceptor>replace: '_450\.', '_1000.'</interceptor>
+	<interceptor>replace: '_\d+\.', '_1000.'</interceptor>
 </host>
 
 <!-- Verified -->
