@@ -407,7 +407,7 @@
 
 <host id="southern-charms">
 	<domain>southern-charms.com</domain>
-	<path-pattern>.+/.+/tn_[^"]+\.jpg</path-pattern>
+	<path-pattern>\w+/\w+/tn_\w+\.jpg</path-pattern>
 	<search-pattern>replace: '/tn_(.+)', '/$1'</search-pattern>
 </host>
 
