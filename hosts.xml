@@ -409,8 +409,8 @@
 <host id="southern-charms">
 	<domain>southern-charms.com</domain>
 	<path-pattern>.+\.jpg</path-pattern>
-	<interceptor>replace: '/_tn', '/'</interceptor>
 	<search-pattern>SELF</search-pattern>
+	<interceptor>replace: '/_tn', '/'</interceptor>
 </host>
 
 <!-- Verified -->
