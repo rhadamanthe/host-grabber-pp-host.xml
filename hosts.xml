@@ -405,9 +405,11 @@
 	<search-pattern>ID: wallpaper_image</search-pattern>
 </host>
 
+<!-- Verified -->
 <host id="southern-charms">
 	<domain>southern-charms.com</domain>
-	<path-pattern>(?!.*/tn_).+\.jpg</path-pattern>
+	<path-pattern>.+\.jpg</path-pattern>
+	<interceptor>replace: '/_tn', '/'</interceptor>
 	<search-pattern>SELF</search-pattern>
 </host>
 
