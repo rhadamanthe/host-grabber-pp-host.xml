@@ -407,10 +407,10 @@
 
 <!-- Verified -->
 <host id="southern-charms">
-	<domain>southern-charms.com</domain>
-	<path-pattern>.+\.jpg</path-pattern>
+	<domain-pattern>southern-charms\d*\.com</domain-pattern>
+	<path-pattern>.+/fotos.*/.+\.jpg</path-pattern>
 	<search-pattern>SELF</search-pattern>
-	<interceptor>replace: '/_tn', '/'</interceptor>
+	<interceptor>replace: '/tn_', '/'</interceptor>
 </host>
 
 <!-- Verified -->
