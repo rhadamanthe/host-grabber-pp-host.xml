@@ -482,9 +482,8 @@
 <!-- Verified -->
 <host id="xhamster">
 	<domain>xhamster.com</domain>
-	<path-pattern>_$CURRENT$_</path-pattern>
-	<search-pattern>xpath: //div[@class='image-thumb']/@data-lazy</search-pattern>
-	<interceptor>replace: '_\d+\.', '_1000.'</interceptor>
+	<path-pattern>photos/gallery/\d+/\d+</path-pattern>
+	<search-pattern>expreg: "imageURL":"([^"]+)"</search-pattern>
 </host>
 
 <!-- Verified -->
