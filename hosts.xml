@@ -408,7 +408,7 @@
 <!-- Verified -->
 <host id="southern-charms">
 	<domain-pattern>southern-charms\d*\.com</domain-pattern>
-	<path-pattern>.+/fotos.*/.+\.jpg</path-pattern>
+	<path-pattern>fotos\d*/.+\.jpg</path-pattern>
 	<search-pattern>SELF</search-pattern>
 	<interceptor>replace: '/tn_', '/'</interceptor>
 </host>
