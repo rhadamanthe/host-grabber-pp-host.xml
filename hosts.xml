@@ -482,7 +482,7 @@
 <!-- Verified -->
 <host id="xhamster">
 	<domain>xhamster.com</domain>
-	<path-pattern>&lt;a href="(https?://thumb[^"]+)"<path-pattern>
+	<path-pattern>a href="(https?://thumb[^"]+)"</path-pattern>
 	<search-pattern>self</search-pattern>
 </host>
 
