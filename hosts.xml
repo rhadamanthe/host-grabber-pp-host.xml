@@ -482,8 +482,8 @@
 <!-- Verified -->
 <host id="xhamster">
 	<domain>xhamster.com</domain>
-	<path-pattern>a href="(https?://thumb[^"]+)"</path-pattern>
-	<search-pattern>self</search-pattern>
+	<path-pattern>photos/gallery/\d+/\d+</path-pattern>
+	<search-pattern>expreg: "imageURL":"([^"]+)"</search-pattern>
 </host>
 
 <!-- Verified -->
