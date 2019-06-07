@@ -504,5 +504,13 @@
 	<path-pattern>zimage/.+\.php</path-pattern>
 	<search-pattern>ID: userPic</search-pattern>
 </host>
+	
+<!-- Verified -->
+<host id="tumblr">
+	<domain>tumblr.com</domain>
+	<path-pattern>_$CURRENT$_</path-pattern>
+	<search-pattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></search-pattern>
+	<interceptor>replace: '_\\d+\\.(jpg|png|gif)', '_1280.$1'</interceptor>
+</host>
 
 </root>
