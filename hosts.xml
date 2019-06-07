@@ -444,29 +444,6 @@
 	<search-pattern>self</search-pattern>
 </host>
 
-<!--
-<host id="tumblr">
-<path-pattern>http://.+\.tumblr\.com/post/.+</path-pattern>
-<search-pattern><![CDATA[function(pageData, pageUrl) {
-	var retVal = new Object();
-
-	var iUrl = pageData.match(/href="(http://.+\.tumblr\.com/photo/\d+/.+?)"/);
-	if (!iUrl) iUrl = pageData.match(/src="(http://.+\.tumblr\.com.+tumblr_.+?)"/);
-
-	if (!iUrl) {
-		retVal.imgUrl = null;
-		retVal.status = "ABORT";
-		}
-	else {
-		retVal.imgUrl = iUrl[1];
-		retVal.status = "OK";
-		}
-
-	return retVal;
-	}]]></search-pattern>
-</host>
--->
-
 <host id="turboimagehost">
 	<domain>turboimagehost.com</domain>
 	<path-pattern>p/.+</path-pattern>
