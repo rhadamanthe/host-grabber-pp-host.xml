@@ -447,7 +447,7 @@
 <host id="turboimagehost">
 	<domain>turboimagehost.com</domain>
 	<path-pattern>p/.+</path-pattern>
-	<search-pattern>ID: imageid</search-pattern>
+	<search-pattern>ID: uImage</search-pattern>
 </host>
 
 <host id="x-art">
