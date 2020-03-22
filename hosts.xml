@@ -368,36 +368,12 @@
 </host>
 -->
 
-<!--
+<!-- Verified -->
 <host id="postimage">
-<path-pattern>http://(?:www\.)?postimage\.org/image(?:\.php\?|/)</path-pattern>
-<search-pattern><![CDATA[function(pageData, pageUrl) {
-	var retVal = new Object();
-
-	if (!pageUrl.match(//full//)) {
-		var full = pageData.match(/<a href='(.+?)'>full size/);
-		if (full) {
-			retVal.imgUrl = full[1];
-			retVal.status = "REQUEUE";
-			return retVal;
-			}
-		}
-
-	var iUrl = pageData.match(/src='(http://\w+\.postimage\.org/.+?\..{3,4})'/);
-
-	if (!iUrl) {
-		retVal.imgUrl = null;
-		retVal.status = "ABORT";
-		}
-	else {
-		retVal.imgUrl = iUrl[1];
-		retVal.status = "OK";
-		}
-
-	return retVal;
-	}]]></search-pattern>
+	<domain>postimg.cc</domain>
+	<path-pattern>[^/<>"]+</path-pattern>
+	<search-pattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></search-pattern>
 </host>
--->
 
 <host id="skins.be" maxThreads="2">
 	<domain>image.skins.be</domain>
