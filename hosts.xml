@@ -371,7 +371,7 @@
 <!-- Verified -->
 <host id="postimage">
 	<domain>postimg.cc</domain>
-	<path-pattern>[^/<>"]+</path-pattern>
+	<path-pattern>[^/&amp;&lt;&gt;"]+</path-pattern>
 	<search-pattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></search-pattern>
 </host>
 
