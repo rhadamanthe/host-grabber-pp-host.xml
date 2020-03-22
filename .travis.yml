@@ -6,9 +6,11 @@ node_js:
 env:
   - RHAD_SCRIPT="./library.dictionary.js" RHAD_DICTIONARY="../hosts.xml"
 
+services:
+  - xvfb
+
 before_script:
   - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
   - cd build
   - wget https://raw.githubusercontent.com/rhadamanthe/host-grabber-pp/master/tests/node.js/validate-dictionary.js
