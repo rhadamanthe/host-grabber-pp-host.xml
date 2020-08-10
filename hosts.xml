@@ -441,7 +441,7 @@
 
 <!-- Verified -->
 <host id="xhamster">
-	<domain>xhamster.com</domain>
+	<domain-pattern>xhamster\d+\.com</domain-pattern>
 	<path-pattern>_$CURRENT$_</path-pattern>
 	<search-pattern>expreg: "imageURL":"([^"]+)"</search-pattern>
 </host>
