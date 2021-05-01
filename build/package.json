@@ -1,7 +1,7 @@
 {
   "name": "host-grabber-pp-host.xml-validator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A module for validation dependencies",
   "main": "validate-dictionary.js",
   "scripts": {
     "start": "node validate-dictionary.js"
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/rhadamanthe/host-grabber-pp-host.xml#readme",
   "dependencies": {
-    "xmldom": "^0.1.27"
+    "xmldom": "0.6"
   }
 }

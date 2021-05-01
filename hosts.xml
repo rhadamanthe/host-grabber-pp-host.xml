@@ -188,6 +188,13 @@
 	<search-pattern>ID: thepic</search-pattern>
 </host>
 
+<!-- Verified (for images posted from 2021 and maybe before) -->
+<host id="imagevenue-2021">
+	<domain>imagevenue.com</domain>
+	<path-pattern>[A-Z0-9]+</path-pattern>
+	<search-pattern>CSS query: card-body img</search-pattern>
+</host>
+
 <!-- Verified (for images posted from April 2020) -->
 <host id="imagevenue-2020">
 	<domain>imagevenue.com</domain>
