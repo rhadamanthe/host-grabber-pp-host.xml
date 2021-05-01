@@ -306,6 +306,12 @@
 	<search-pattern>ID: singlePhotoImage</search-pattern>
 </host>
 
+<host id="nudostar">
+  <domain>nudostar.com</domain>
+  <path-pattern>forum/attachments/.*</path-pattern>
+  <search-pattern>self</search-pattern>
+</host>
+
 <host id="photo.net">
 	<domain>photo.net</domain>
 	<path-pattern>photodb/photo\?photo_id=\d+</path-pattern>
