@@ -152,7 +152,7 @@
 <host id="imagebam">
 	<domain>imagebam.com</domain>
 	<path-pattern>image/[^&amp;&lt;&gt;"]+</path-pattern>
-	<search-pattern>class: image</search-pattern>
+	<search-pattern>css query: .main-image</search-pattern>
 </host>
 
 <!--  Verified -->
