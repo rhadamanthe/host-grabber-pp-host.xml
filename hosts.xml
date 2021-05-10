@@ -185,7 +185,7 @@
 <host id="imagevenue-old">
 	<domain>imagevenue.com</domain>
 	<path-pattern>(img|view)\.php\?image=.+</path-pattern>
-	<search-pattern>ID: thepic</search-pattern>
+	<search-pattern>CSS query: .card-body img</search-pattern>
 </host>
 
 <!-- Verified (for images posted from 2021 and maybe before) -->
