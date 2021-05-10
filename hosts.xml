@@ -175,6 +175,13 @@
 </host>
 
 <!-- Verified -->
+<host id="imgspice">
+	<domain>imgspice.com</domain>
+	<path-pattern>.+/.+</path-pattern>
+	<search-pattern>ID: imgpreview</search-pattern>
+</host>
+
+<!-- Verified -->
 <host id="imagetwist">
 	<domain>imagetwist.com</domain>
 	<path-pattern>\w+/[^/"]+</path-pattern>
