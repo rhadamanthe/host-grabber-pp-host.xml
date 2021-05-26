@@ -154,7 +154,7 @@
 <!-- Verified -->
 <host id="imagebam">
 	<domain>imagebam.com</domain>
-	<path-pattern>image/[^&amp;&lt;&gt;"]+</path-pattern>
+	<path-pattern>(image|view)/[^&amp;&lt;&gt;"]+</path-pattern>
 	<link-search-pattern>css query: .main-image</link-search-pattern>
 	<file-name-attribute>alt</file-name-attribute>
 </host>
@@ -316,12 +316,15 @@
 
 <host id="nudostar">
   <domain>nudostar.com</domain>
-  <path-pattern>forum/attachments/.*</path-pattern>
+  <path-pattern>forum/attachments/[^&lt;&gt;"?]*</path-pattern>
   <link-search-pattern>self</link-search-pattern>
   <interceptor>replace: '/$', ''</interceptor>
   <file-name-attribute></file-name-attribute>
   <interceptor>replace: '-jpg\.\d+', '.jpg'</interceptor>
+  <interceptor>replace: '-jpeg\.\d+', '.jpg'</interceptor>
   <interceptor>replace: '-png\.\d+', '.png'</interceptor>
+  <!-- Consider numeric names as JPG files -->
+  <interceptor>replace: '^(\d+)$', '$1.jpg'</interceptor>
 </host>
 
 <host id="photo.net">
