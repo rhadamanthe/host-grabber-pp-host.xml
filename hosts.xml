@@ -181,7 +181,7 @@
 <!-- Verified -->
 <host id="imgspice">
 	<domain>imgspice.com</domain>
-	<path-pattern>.+/.+</path-pattern>
+	<path-pattern><![CDATA[[^<>/"]+/.+\.html]]></path-pattern>
 	<link-search-pattern>ID: imgpreview</link-search-pattern>
 	<file-name-attribute>alt</file-name-attribute>
 </host>
@@ -211,7 +211,7 @@
 
 <host id="imdb">
 	<domain>imdb.com</domain>
-	<path-pattern>.+/mediaindex/.+/media/.+/.+</path-pattern>
+	<path-pattern><![CDATA[[^<>"/]+/mediaindex/.+/media/[^<>/"]+/.+]]></path-pattern>
 	<link-search-pattern>ID: primary-img</link-search-pattern>
 </host>
 
@@ -341,13 +341,13 @@
 
 <host id="photobucket2">
 	<domain>photobucket.com</domain>
-	<path-pattern>albums/.+/.+\..{3,4}</path-pattern>
+	<path-pattern><![CDATA[albums/[^<>/"]+/.+\..{3,4}]]></path-pattern>
 	<link-search-pattern>self</link-search-pattern>
 </host>
 
 <host id="photocelebs">
 	<domain>photocelebs.info</domain>
-	<path-pattern>.+/.+</path-pattern>
+	<path-pattern><![CDATA[[^<>/"]+/.+]]></path-pattern>
 	<link-search-pattern>ID: thepic</link-search-pattern>
 </host>
 
@@ -416,7 +416,7 @@
 
 <host id="thesupermodelsgallery">
 	<domain>thesupermodelsgallery.com</domain>
-	<path-pattern>wp-content/uploads/\d+/\d+/.+/.+\..{3,4}</path-pattern>
+	<path-pattern><![CDATA[wp-content/uploads/\d+/\d+/[^<>/"]+/.+\..{3,4}]]></path-pattern>
 	<link-search-pattern>self</link-search-pattern>
 </host>
 
