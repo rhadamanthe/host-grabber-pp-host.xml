@@ -35,6 +35,13 @@
 	<path-pattern>main/index\.php\?.+attach</path-pattern>
 	<link-search-pattern>ID: thepic</link-search-pattern>
 </host>
+	
+<!-- Verified -->
+<host id="bildhost">
+	<domain>bildhost.com</domain>
+	<path-pattern>image/.+</path-pattern>
+	<link-search-pattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></link-search-pattern>
+</host>
 
 <!--  Verified -->
 <host id="buchanan-caps">
