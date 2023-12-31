@@ -366,9 +366,10 @@
 
 <!-- Verified -->
 <host id="pimpandhost">
-	<domain>filesor.com</domain>
-	<path-pattern>pimpandhost.com/.*_(m|l)\.(jpg|png|gif)</path-pattern>
-	<link-search-pattern>replace: '_(m|l)\.(jpg|png|gif)$', '.$2'</link-search-pattern>
+	<domain>pimpandhost.com</domain>
+	<path-pattern>image/.*</path-pattern>
+	<link-search-pattern>CLASS: main-image-wrapper</link-search-pattern>
+    <link-attribute>data-src</link-attribute>
 </host>
 
 <host id="pixhost-org">
@@ -491,6 +492,15 @@
 	<path-pattern>_$CURRENT$_</path-pattern>
 	<link-search-pattern><![CDATA[expreg: data-big-photo="([^"]+)"]]></link-search-pattern>
 	<interceptor>replace: '_\d+\.(jpg|png|gif)', '_1280.$1'</interceptor>
+</host>
+
+<!-- Verified -->
+<host id="the-travel-deluxe">
+	<domain>the-travel-deluxe.com</domain>
+	<path-pattern>_$CURRENT$_</path-pattern>
+	<link-search-pattern>xpath: //img</link-search-pattern>
+	<link-attribute>srcSet</link-attribute>
+	<interceptor>replace: '\?.*', ''</interceptor>
 </host>
 
 </root>
