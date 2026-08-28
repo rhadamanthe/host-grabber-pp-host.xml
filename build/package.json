@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/rhadamanthe/host-grabber-pp-host.xml#readme",
   "dependencies": {
-    "@xmldom/xmldom": "0.9.12"
+    "@xmldom/xmldom": "^0.9.12"
   }
 }
