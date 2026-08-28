@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  RHAD_SCRIPT: "./library.dictionary.js"
+  RHAD_DICTIONARY: "../hosts.xml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Set up xvfb
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+          export DISPLAY=:99.0
+          Xvfb :99 -screen 0 1024x768x24 &
+          sleep 3
+
+      - name: Fetch build dependencies
+        working-directory: build
+        run: |
+          wget https://raw.githubusercontent.com/rhadamanthe/host-grabber-pp/master/tests/node.js/validate-dictionary.js
+          wget https://raw.githubusercontent.com/rhadamanthe/host-grabber-pp/master/src/scripts/mixed/library.dictionary.js
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Security audit
+        run: npm audit --audit-level=high
+
+      - name: Run
+        env:
+          DISPLAY: ":99.0"
+        run: npm start

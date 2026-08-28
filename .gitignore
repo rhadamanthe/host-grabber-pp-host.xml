@@ -3,4 +3,4 @@ coverage/
 *~
 node_modules
 package-lock.json
-library.dictionary.js
+build/*.js

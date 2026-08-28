@@ -35,7 +35,7 @@
 	<path-pattern>main/index\.php\?.+attach</path-pattern>
 	<link-search-pattern>ID: thepic</link-search-pattern>
 </host>
-	
+
 <!-- Verified -->
 <host id="bildhost">
 	<domain>bildhost.com</domain>
@@ -389,6 +389,14 @@
 </host>
 
 <!-- Verified -->
+<host id="pixhost-cc">
+	<domain>pixhost.cc</domain>
+	<path-pattern>show/.+</path-pattern>
+	<link-search-pattern>ID: image</link-search-pattern>
+	<file-name-attribute>alt</file-name-attribute>
+</host>
+
+<!-- Verified -->
 <host id="postimage">
 	<domain>postimg.cc</domain>
 	<path-pattern>[^/&amp;&lt;&gt;"]+</path-pattern>
@@ -477,7 +485,7 @@
 	<path-pattern>zimage/.+\.php</path-pattern>
 	<link-search-pattern>ID: userPic</link-search-pattern>
 </host>
-	
+
 <!-- Verified -->
 <host id="tumblr">
 	<domain>tumblr.com</domain>
@@ -485,7 +493,7 @@
 	<link-search-pattern><![CDATA[expreg: <meta property="og:image"\s+content="([^"]+)"]]></link-search-pattern>
 	<interceptor>replace: '_\d+\.(jpg|png|gif)', '_1280.$1'</interceptor>
 </host>
-	
+
 <!-- Verified -->
 <host id="tumblr-restricted">
 	<domain>tumblr.com</domain>
