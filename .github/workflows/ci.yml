@@ -23,14 +23,6 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Set up xvfb
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y xvfb
-          export DISPLAY=:99.0
-          Xvfb :99 -screen 0 1024x768x24 &
-          sleep 3
-
       - name: Fetch build dependencies
         working-directory: build
         run: |
@@ -44,6 +36,4 @@ jobs:
         run: npm audit --audit-level=high
 
       - name: Run
-        env:
-          DISPLAY: ":99.0"
         run: npm start
